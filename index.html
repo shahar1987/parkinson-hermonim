@@ -48,6 +48,9 @@ a{color:var(--olive)}
 .btn i{font-size:28px;flex:none}
 .btn.ghost{background:var(--white);color:var(--olive);border:2px solid var(--olive);min-height:64px;font-size:20px}
 .btn.ghost:hover{background:var(--sage)}
+.btn.call span{display:flex;flex-direction:column;line-height:1.3}
+.btn.call small{font-size:20px;font-weight:500}
+.btn.call{min-height:84px;padding-block:10px}
 .link{display:inline-flex;align-items:center;min-height:52px;font-weight:600;text-underline-offset:6px}
 
 /* header: only the association */
@@ -71,7 +74,7 @@ header{background:var(--white);border-bottom:1px solid var(--line)}
 @media (max-width:860px){.hero{padding:28px 0 56px}.hero .wrap{grid-template-columns:1fr;gap:40px}.btn{max-width:none}}
 
 /* sunday morning: a real sequence */
-.morning{background:var(--white)}
+.morning{background:var(--cream)}
 .steps{list-style:none;padding:0;margin:32px 0;position:relative;max-width:640px}
 .steps::before{content:"";position:absolute;top:12px;bottom:12px;right:33px;width:2px;background:var(--sage-2)}
 .steps li{position:relative;display:grid;grid-template-columns:68px 1fr;gap:20px;padding-bottom:30px}
@@ -82,6 +85,7 @@ header{background:var(--white);border-bottom:1px solid var(--line)}
 .also{margin-top:28px;color:var(--stone);max-width:52ch}
 
 /* family */
+.family{background:var(--white)}
 .family .wrap{display:grid;grid-template-columns:1fr 1.25fr;gap:56px;align-items:start}
 .family h2{font-size:clamp(32px,4.2vw,46px)}
 .family .big{margin-top:16px;font:500 clamp(22px,2.3vw,26px)/1.5 "Rubik",sans-serif;color:var(--olive)}
@@ -89,17 +93,13 @@ header{background:var(--white);border-bottom:1px solid var(--line)}
 .family .text b{color:var(--ink);font-weight:600}
 @media (max-width:860px){.family .wrap{grid-template-columns:1fr;gap:20px}}
 
-/* people */
+/* people: names and roles, no photos */
 .people{background:var(--white)}
-.people .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:32px}
-.person{display:flex;gap:22px;align-items:center;background:var(--cream);border-radius:var(--r-lg);padding:24px}
-.person img,.person .av{flex:none;width:112px;height:112px;border-radius:50%;object-fit:cover}
-.person .av{display:grid;place-items:center;background:var(--sage-2);color:var(--olive);font:600 46px/1 "Rubik",sans-serif}
-.person h3{font-size:24px}
-.person .role{font-weight:500;color:var(--olive)}
-.person p{color:var(--stone);margin-top:4px}
-@media (max-width:860px){.people .grid{grid-template-columns:1fr}}
-@media (max-width:560px){.person{flex-direction:column;text-align:center}}
+.team{list-style:none;padding:0;margin-top:28px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:820px}
+.team li{background:var(--cream);border-radius:var(--r-sm);padding:20px 24px;display:flex;flex-direction:column}
+.team .role{color:var(--stone);font-size:19px}
+.team b{font-size:25px;font-weight:600;color:var(--olive)}
+@media (max-width:560px){.team{grid-template-columns:1fr}}
 
 /* why table tennis */
 .why .lead{margin-top:14px;max-width:52ch}
@@ -179,22 +179,9 @@ footer .bar a{color:var(--white)}
         <a class="btn" href="https://wa.me/972504450054?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%93%D7%95%D7%A8%D7%99%D7%AA%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%93%D7%A3%20%D7%A9%D7%9C%20%D7%A1%D7%A0%D7%99%D7%A3%20%D7%97%D7%A8%D7%9E%D7%95%D7%A0%D7%99%D7%9D%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%94%D7%A6%D7%98%D7%A8%D7%A4%D7%95%D7%AA%20%D7%9C%D7%A4%D7%A2%D7%99%D7%9C%D7%95%D7%AA." target="_blank" rel="noopener"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i>הצטרפות בוואטסאפ</a>
       </div>
       <figure class="frame">
-        <img src="img/hannover.jpg" width="1200" height="893" fetchpriority="high" alt="המאמן שחר גלעד ושתי שחקניות מהקבוצה בחולצות נבחרת ישראל באולם אליפות העולם">
+        <img src="img/hannover.jpg" width="1200" height="893" fetchpriority="high" alt="המאמן שחר גילעד ושתי שחקניות מהקבוצה בחולצות נבחרת ישראל באולם אליפות העולם">
         <figcaption>שחקניות מהקבוצה באליפות העולם, הנובר 2026</figcaption>
       </figure>
-    </div>
-  </section>
-
-  <section class="sec morning" id="morning">
-    <div class="wrap">
-      <h2>מה קורה בבוקר יום ראשון</h2>
-      <ol class="steps">
-        <li><span class="t">8:15</span><div><h3>פיזיותרפיה בקבוצה</h3><p>שעה של תרגול בקבוצה, בקצב שמתאים לכל משתתף.</p></div></li>
-        <li><span class="t">9:15</span><div><h3>טניס שולחן</h3><p>שעה של משחק עם המאמן שחר גלעד. אין צורך בניסיון או בציוד.</p></div></li>
-        <li><span class="t">10:15</span><div><h3>מפגש חברים</h3><p>יושבים יחד, ולא פעם יש גם הרצאה או פעילות מעניינת.</p></div></li>
-      </ol>
-      <a class="btn ghost" href="https://waze.com/ul?q=%D7%A9%D7%90%D7%A8%20%D7%99%D7%A9%D7%95%D7%91" target="_blank" rel="noopener"><i class="ph ph-navigation-arrow" aria-hidden="true"></i>ניווט לאולם בשאר ישוב</a>
-      <p class="also">עוד בסניף: הידרותרפיה בקבוצה, סדנת קול עם קלינאית תקשורת וסדנת תמיכה לבני משפחה.</p>
     </div>
   </section>
 
@@ -212,27 +199,30 @@ footer .bar a{color:var(--white)}
     </div>
   </section>
 
+  <section class="sec morning" id="morning">
+    <div class="wrap">
+      <h2>מה קורה בבוקר יום ראשון</h2>
+      <ol class="steps">
+        <li><span class="t">8:15</span><div><h3>פיזיותרפיה בקבוצה</h3><p>שעה של תרגול בקבוצה, בקצב שמתאים לכל משתתף.</p></div></li>
+        <li><span class="t">9:15</span><div><h3>טניס שולחן</h3><p>שעה של משחק עם המאמן שחר גילעד. אין צורך בניסיון או בציוד.</p></div></li>
+        <li><span class="t">10:15</span><div><h3>מפגש חברים</h3><p>יושבים יחד, ולא פעם יש גם הרצאה או פעילות מעניינת.</p></div></li>
+      </ol>
+      <a class="btn ghost" href="https://waze.com/ul?q=%D7%A9%D7%90%D7%A8%20%D7%99%D7%A9%D7%95%D7%91" target="_blank" rel="noopener"><i class="ph ph-navigation-arrow" aria-hidden="true"></i>ניווט לאולם בשאר ישוב</a>
+      <p class="also">עוד בסניף: הידרותרפיה בקבוצה, סדנת קול עם קלינאית תקשורת וסדנת תמיכה לבני משפחה.</p>
+    </div>
+  </section>
+
+
+
   <section class="sec people">
     <div class="wrap">
       <h2>מי מחכה לכם</h2>
-      <div class="grid">
-        <article class="person">
-          <img src="img/coach.jpg" width="390" height="390" loading="lazy" alt="המאמן שחר גלעד מחייך באולם">
-          <div>
-            <h3>שחר גלעד</h3>
-            <div class="role">המאמן</div>
-            <p>המאמן הראשי של מועדון טניס שולחן מבואות החרמון. ליווה את שחקניות הקבוצה לאליפות העולם בהנובר.</p>
-          </div>
-        </article>
-        <article class="person">
-          <span class="av" aria-hidden="true">ד</span>
-          <div>
-            <h3>דורית היימן</h3>
-            <div class="role">מנהלת הסניף</div>
-            <p>הכתובת לכל שאלה. היא תספר על הפעילויות ותתאם איתכם את המפגש הראשון.</p>
-          </div>
-        </article>
-      </div>
+      <ul class="team">
+        <li><span class="role">מנהלת הסניף</span><b>דורית היימן</b></li>
+        <li><span class="role">מאמן טניס שולחן</span><b>שחר גילעד</b></li>
+        <li><span class="role">מתנדב</span><b>משה רוזנפלד</b></li>
+        <li><span class="role">פיזיותרפיסט</span><b>לירן</b></li>
+      </ul>
     </div>
   </section>
 
@@ -292,7 +282,7 @@ footer .bar a{color:var(--white)}
         <h2>בואו לנסות בוקר אחד</h2>
         <p>שולחים הודעה לדורית היימן, מנהלת הסניף, והיא כבר תדאג לשאר.</p>
         <a class="btn" href="https://wa.me/972504450054?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%93%D7%95%D7%A8%D7%99%D7%AA%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%93%D7%A3%20%D7%A9%D7%9C%20%D7%A1%D7%A0%D7%99%D7%A3%20%D7%97%D7%A8%D7%9E%D7%95%D7%A0%D7%99%D7%9D%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%94%D7%A6%D7%98%D7%A8%D7%A4%D7%95%D7%AA%20%D7%9C%D7%A4%D7%A2%D7%99%D7%9C%D7%95%D7%AA." target="_blank" rel="noopener"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i>הצטרפות בוואטסאפ</a>
-        <a class="btn ghost" href="tel:+972504450054"><i class="ph ph-phone" aria-hidden="true"></i>שיחה לדורית: 050-4450054</a>
+        <a class="btn ghost call" href="tel:+972504450054"><i class="ph ph-phone" aria-hidden="true"></i><span>שיחה לדורית היימן<small dir="ltr">050-4450054</small></span></a>
       </div>
     </div>
   </section>
