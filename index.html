@@ -8,6 +8,7 @@
 <meta property="og:title" content="סניף חרמונים | עמותת פרקינסון בישראל">
 <meta property="og:description" content="טניס שולחן, פיזיותרפיה קבוצתית והרצאות, כל שבוע במתנ״ס מבואות החרמון.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://shahar1987.github.io/parkinson-hermonim/img/hannover.jpg">
 <meta property="og:locale" content="he_IL">
 <meta name="theme-color" content="#1f5e46">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -109,9 +110,11 @@ header .btn{min-height:48px;padding:0 20px;font-size:17px}
 @media (max-width:760px){.stats{grid-template-columns:1fr}}
 
 /* pride band */
-.pride{text-align:center}
-.pride p{font-size:clamp(24px,3.4vw,34px);font-weight:600;max-width:28ch;margin:0 auto;line-height:1.35}
-.pride i{font-size:48px;color:var(--accent);display:block;margin:0 auto 18px}
+.pride .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
+.pride img{width:100%;height:auto;border-radius:var(--radius)}
+.pride p{font-size:clamp(24px,3.2vw,32px);font-weight:600;line-height:1.35}
+.pride i{font-size:48px;color:var(--accent);display:block;margin-bottom:16px}
+@media (max-width:860px){.pride .wrap{grid-template-columns:1fr;gap:28px}}
 
 /* faq */
 .faq{max-width:780px}
@@ -253,8 +256,11 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-bet
 
   <section class="pride">
     <div class="wrap">
-      <i class="ph ph-trophy" aria-hidden="true"></i>
-      <p>שני שחקנים מהקבוצה שלנו ייצגו את ישראל באליפות העולם בטניס שולחן לפרקינסון, בהנובר, ספטמבר 2026.</p>
+      <img src="img/hannover.jpg" width="1200" height="893" loading="lazy" alt="המאמן שחר גלעד עם שתי שחקניות הקבוצה בנבחרת ישראל, מחזיקים את דגל המועצה האזורית מבואות החרמון באולם האליפות בהנובר">
+      <div>
+        <i class="ph ph-trophy" aria-hidden="true"></i>
+        <p>שתי שחקניות מהקבוצה שלנו ייצגו את ישראל באליפות העולם בטניס שולחן לפרקינסון, בהנובר, ספטמבר 2026.</p>
+      </div>
     </div>
   </section>
 
