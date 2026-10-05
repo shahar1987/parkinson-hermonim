@@ -4,163 +4,167 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>סניף חרמונים | עמותת פרקינסון בישראל</title>
-<meta name="description" content="סניף חרמונים של עמותת פרקינסון בישראל. פינג פונג, פיזיותרפיה והרצאות, כל שבוע במתנ״ס מבואות החרמון בצומת כ״ח.">
+<meta name="description" content="סניף חרמונים של עמותת פרקינסון בישראל, בשיתוף מועדון טניס שולחן מבואות החרמון, מתנ״ס אזורי מבואות החרמון והמועצה האזורית. פינג פונג, פיזיותרפיה והרצאות, כל שבוע בצומת כ״ח.">
 <meta property="og:title" content="יש לכם מקום ליד השולחן | סניף חרמונים">
 <meta property="og:description" content="פינג פונג, פיזיותרפיה והרצאות, כל שבוע במתנ״ס מבואות החרמון.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://shahar1987.github.io/parkinson-hermonim/img/hannover.jpg">
 <meta property="og:locale" content="he_IL">
-<meta name="theme-color" content="#1e4d3f">
+<meta name="theme-color" content="#3d4617">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Rubik:wght@500;700;800&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="img/hannover.jpg">
 <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
 <style>
-/* Tokens. Radius scale: 28px media and big panels, 18px small cards, pill for buttons and chips. */
+/* Club template palette (2026 templates): olive band, lime stripe, cream body, beige footer, no orange.
+   Radius scale: 26px media and big panels, 16px small cards, pill for buttons and chips. */
 :root{
-  --base:#f7f9f6; --white:#ffffff; --sky:#dcebf2; --sun:#f2c14e;
-  --pine:#1e4d3f; --pine-2:#2c6a57; --ink:#18231e; --stone:#4f5d56; --line:#d5e0da;
-  --on-pine:#ffffff; --r-lg:28px; --r-sm:18px;
-  --shadow:0 20px 45px rgb(30 77 63 / .16);
-}
-@media (prefers-color-scheme: dark){
-  :root{
-    --base:#111814; --white:#18221d; --sky:#16262b; --sun:#f2c14e;
-    --pine:#7fcfaa; --pine-2:#9adcbc; --ink:#eef4f0; --stone:#b8c7bf; --line:#2b3a33;
-    --on-pine:#0e1a14; --shadow:0 20px 45px rgb(0 0 0 / .4);
-  }
+  --olive:#3d4617; --olive-2:#4f5b1e; --ink:#2b3210; --lime:#a8bb43; --lime-2:#bccd5c; --lime-soft:#e6ecc7;
+  --cream:#f7f6ee; --beige:#e4e2d3; --white:#ffffff; --stone:#55593f; --line:#dcdcc8;
+  --r-lg:26px; --r-sm:16px; --shadow:0 18px 40px rgb(61 70 23 / .16);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--base);color:var(--ink);font:400 20px/1.7 "Assistant",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 20px/1.7 "Assistant",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%;height:auto}
 h1,h2,h3,p{margin:0}
-h1,h2,h3{font-family:"Fredoka","Assistant",sans-serif;font-weight:600;line-height:1.15;color:var(--pine)}
-h2{font-size:clamp(32px,4.4vw,48px)}
-h3{font-size:25px}
-a{color:var(--pine)}
+h1,h2,h3{font-family:"Rubik","Assistant",sans-serif;font-weight:700;line-height:1.15;color:var(--olive)}
+h2{font-size:clamp(32px,4.4vw,46px)}
+h3{font-size:24px}
+a{color:var(--olive)}
 .wrap{max-width:1160px;margin:0 auto;padding:0 20px}
-.sec{padding:96px 0}
-.lead{font-size:clamp(20px,2.1vw,23px);color:var(--stone);max-width:36ch}
+.sec{padding:88px 0}
+.lead{font-size:clamp(20px,2.1vw,23px);color:var(--stone);max-width:40ch}
 .skip{position:absolute;right:-9999px}
 .skip:focus{right:16px;top:16px;z-index:9;background:var(--white);padding:10px 16px}
-:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:6px}
+:focus-visible{outline:3px solid var(--lime);outline-offset:3px;border-radius:6px}
 
-.btn{display:inline-flex;align-items:center;gap:12px;min-height:60px;padding:0 32px;border-radius:999px;background:var(--pine);color:var(--on-pine);font:700 21px/1 "Assistant",sans-serif;text-decoration:none;white-space:nowrap;box-shadow:var(--shadow);cursor:pointer;transition:transform .2s cubic-bezier(.16,1,.3,1),background .2s}
-.btn:hover{background:var(--pine-2);transform:translateY(-2px)}
+.btn{display:inline-flex;align-items:center;gap:12px;min-height:60px;padding:0 32px;border-radius:999px;background:var(--lime);color:var(--ink);font:700 21px/1 "Assistant",sans-serif;text-decoration:none;white-space:nowrap;cursor:pointer;box-shadow:0 10px 24px rgb(0 0 0 / .18);transition:transform .2s cubic-bezier(.16,1,.3,1),background .2s}
+.btn:hover{background:var(--lime-2);transform:translateY(-2px)}
 .btn:active{transform:translateY(1px) scale(.98)}
 .btn i{font-size:28px}
-.btn.sm{min-height:48px;padding:0 22px;font-size:18px;box-shadow:none}
-.btn.sm i{font-size:22px}
-.btn.sun{background:var(--sun);color:#1b2a22}
-.btn.sun:hover{background:#f6cd6a}
-.link{display:inline-flex;align-items:center;gap:6px;font-weight:600;text-underline-offset:5px}
+.link{display:inline-flex;align-items:center;gap:6px;font-weight:700;text-underline-offset:5px}
 
-/* header */
-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:78px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);line-height:1.2}
-.brand .ball{width:38px;height:38px;border-radius:50%;background:var(--sun);display:grid;place-items:center;color:#1b2a22;font-size:22px}
-.brand b{display:block;font-family:"Fredoka",sans-serif;font-weight:600;font-size:21px;color:var(--pine)}
-.brand small{font-size:15px;color:var(--stone)}
-@media (max-width:640px){header .btn{display:none}}
+/* header: white strip with the four partner logos, exactly like the club templates */
+header{background:var(--white);border-bottom:6px solid var(--lime-soft)}
+.logos{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:104px;padding-block:12px}
+.logos img{height:66px;width:auto}
+.logos .club{height:92px}
+@media (max-width:700px){.logos{display:grid;grid-template-columns:1fr 1fr;justify-items:center;gap:14px 18px}.logos img{height:44px}.logos .club{height:72px}}
 
-/* hero */
-.hero{padding:28px 0 104px;background:linear-gradient(var(--sky),var(--sky)) 0 0/100% 78% no-repeat}
+/* hero: olive band with the slanted lime stripe */
+.hero{background:var(--olive);color:var(--cream);position:relative;padding:64px 0 132px;clip-path:polygon(0 0,100% 0,100% 100%,0 calc(100% - 64px))}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:84px;background:var(--lime);clip-path:polygon(0 76%,100% 0,100% 24%,0 100%)}
 .hero .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center}
-.hero h1{font-size:clamp(44px,6vw,72px);font-weight:700;letter-spacing:-.01em}
-.hero .lead{margin:22px 0 34px}
-.hero .actions{display:flex;flex-wrap:wrap;gap:20px 28px;align-items:center}
-.photo{position:relative;margin:0}
-.photo img{width:100%;aspect-ratio:5/4;object-fit:cover;border-radius:var(--r-lg);box-shadow:var(--shadow)}
-.photo figcaption{position:absolute;inset:auto 18px 18px auto;background:var(--white);color:var(--ink);font-size:16px;font-weight:600;padding:8px 16px;border-radius:999px;box-shadow:var(--shadow);white-space:nowrap}
-/* the one memorable moment: a ball drops onto the photo and settles */
-.drop{position:absolute;top:-26px;left:36px;width:64px;height:64px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff7d6 0 18%,var(--sun) 45%,#e0a82e 100%);box-shadow:0 10px 18px rgb(30 77 63 / .25)}
+.org{display:inline-block;font-weight:700;font-size:18px;color:var(--lime-2);margin-bottom:14px}
+.hero h1{color:var(--white);font-size:clamp(44px,6vw,70px);font-weight:800;letter-spacing:-.01em}
+.hero .lead{color:#e9ebd8;margin:20px 0 34px}
+.hero .actions{display:flex;flex-wrap:wrap;gap:18px 28px;align-items:center}
+.hero .link{color:var(--white)}
+.frame{position:relative;margin:0;background:var(--white);padding:10px;border-radius:calc(var(--r-lg) + 10px);box-shadow:var(--shadow)}
+.frame img{width:100%;aspect-ratio:5/4;object-fit:cover;border-radius:var(--r-lg)}
+.frame figcaption{position:absolute;inset:auto 24px 24px auto;background:var(--white);color:var(--ink);font-size:16px;font-weight:700;padding:8px 16px;border-radius:999px;white-space:nowrap}
+/* the one memorable moment: a ping-pong ball drops onto the photo and settles */
+.drop{position:absolute;top:-24px;left:40px;width:58px;height:58px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff 0 22%,#f1f2e6 55%,#cfd2b8 100%);box-shadow:0 10px 18px rgb(0 0 0 / .28)}
 @keyframes bounce{0%{transform:translateY(-260px)}45%{transform:translateY(0)}62%{transform:translateY(-70px)}78%{transform:translateY(0)}88%{transform:translateY(-18px)}100%{transform:translateY(0)}}
 @media (prefers-reduced-motion: no-preference){.drop{animation:bounce 1.6s .3s cubic-bezier(.33,0,.67,1) both}}
-@media (max-width:860px){.hero{background-size:100% 100%;padding-bottom:72px}.photo figcaption{font-size:14px;inset:auto 12px 12px auto}.hero .wrap{grid-template-columns:1fr;gap:44px}.photo{order:-1;margin-top:30px}}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+@media (max-width:860px){.hero{padding:40px 0 112px}.hero .wrap{grid-template-columns:1fr;gap:40px}.frame figcaption{font-size:14px;inset:auto 18px 18px auto}}
 
-/* thursday morning: a real sequence, so a timeline */
+/* thursday morning timeline */
 .morning .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center}
 .morning .lead{margin-top:14px}
-.steps{list-style:none;padding:0;margin:36px 0 0;position:relative}
-.steps::before{content:"";position:absolute;top:10px;bottom:10px;right:27px;width:3px;border-radius:3px;background:var(--line)}
-.steps li{position:relative;display:grid;grid-template-columns:58px 1fr;gap:20px;padding-bottom:30px}
+.steps{list-style:none;padding:0;margin:34px 0 0;position:relative}
+.steps::before{content:"";position:absolute;top:10px;bottom:10px;right:27px;width:3px;border-radius:3px;background:var(--lime-soft)}
+.steps li{position:relative;display:grid;grid-template-columns:58px 1fr;gap:20px;padding-bottom:28px}
 .steps li:last-child{padding-bottom:0}
-.steps .t{z-index:1;width:58px;height:58px;border-radius:50%;background:var(--sun);color:#1b2a22;display:grid;place-items:center;font:700 17px/1 "Assistant",sans-serif}
+.steps .t{z-index:1;width:58px;height:58px;border-radius:50%;background:var(--olive);color:var(--white);display:grid;place-items:center;font:700 17px/1 "Assistant",sans-serif;box-shadow:0 0 0 5px var(--lime)}
 .steps h3{font-size:23px;margin-top:4px}
 .steps p{color:var(--stone);margin-top:4px}
-.where{margin-top:30px;display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;font-weight:600}
-.where span{display:inline-flex;gap:8px;align-items:center}
-.where i{font-size:26px;color:var(--pine)}
+.pill{margin-top:30px;display:flex;flex-wrap:wrap;gap:8px 22px;align-items:center;background:var(--white);border-right:8px solid var(--lime);border-radius:var(--r-sm);padding:16px 22px;font-weight:700}
+.pill span{display:inline-flex;gap:8px;align-items:center}
+.pill i{font-size:26px;color:var(--olive)}
 .morning figure{margin:0}
-.morning figure img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r-lg)}
+.morning figure img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r-lg);border:10px solid var(--white);box-shadow:var(--shadow)}
 @media (max-width:860px){.morning .wrap{grid-template-columns:1fr;gap:40px}.morning figure img{aspect-ratio:16/10}}
 
-/* the rest of the week */
-.week{background:var(--white);border-radius:var(--r-lg);padding:44px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 48px}
-.week h2{grid-column:1/-1;font-size:clamp(28px,3.4vw,36px)}
-.day{display:flex;gap:16px;align-items:flex-start}
-.day i{font-size:34px;color:var(--pine);margin-top:4px}
+/* rest of the week: info pills with the lime side bar, from the templates */
+.week h2{font-size:clamp(28px,3.4vw,38px)}
+.days{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:26px}
+.day{display:flex;gap:16px;align-items:flex-start;background:var(--white);border-right:8px solid var(--lime);border-radius:var(--r-sm);padding:20px 22px}
+.day i{font-size:34px;color:var(--olive);margin-top:2px}
 .day b{display:block;font-size:22px}
 .day span{color:var(--stone)}
-.chips{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:12px;padding-top:24px;border-top:1px solid var(--line)}
-.chip{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;background:var(--sky);font-size:18px;font-weight:600}
-.chip i{font-size:22px;color:var(--pine)}
-@media (max-width:760px){.week{grid-template-columns:1fr;padding:30px 22px}}
+.chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;background:var(--lime-soft);font-size:18px;font-weight:700}
+.chip i{font-size:22px;color:var(--olive)}
+@media (max-width:760px){.days{grid-template-columns:1fr}}
+
+/* who we are: the partners */
+.partners{background:var(--white)}
+.partners .lead{margin-top:14px}
+.roni{margin-top:40px;display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center;background:var(--olive);color:var(--cream);border-radius:var(--r-lg);padding:36px 40px}
+.roni img{width:150px;background:var(--white);border-radius:var(--r-sm);padding:10px}
+.roni h3{color:var(--white);font-size:28px}
+.roni p{margin-top:10px;color:#e9ebd8;max-width:60ch}
+.orgs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:18px}
+.orgcard{border:2px solid var(--lime-soft);border-radius:var(--r-lg);padding:26px;display:flex;flex-direction:column;gap:14px}
+.orgcard .lg{height:96px;display:flex;align-items:center}
+.orgcard .lg img{max-height:96px;width:auto;max-width:100%}
+.orgcard h3{font-size:21px}
+.orgcard p{color:var(--stone);font-size:18px}
+@media (max-width:900px){.roni{grid-template-columns:1fr;text-align:center;justify-items:center;padding:30px 24px}.orgs{grid-template-columns:1fr}}
 
 /* why table tennis */
 .why .lead{margin-top:14px}
-.studies{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:44px}
-.study{background:var(--white);border-radius:var(--r-lg);padding:36px;border:1px solid var(--line)}
-.study .n{font:700 clamp(64px,8vw,88px)/.95 "Fredoka",sans-serif;color:var(--pine)}
-.study .n small{font-size:26px;font-weight:600}
-.study h3{margin:18px 0 8px;font-size:22px;color:var(--ink)}
+.studies{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:40px}
+.study{background:var(--white);border-radius:var(--r-lg);padding:34px;border-top:8px solid var(--lime)}
+.study .n{font:800 clamp(62px,8vw,86px)/.95 "Rubik",sans-serif;color:var(--olive)}
+.study .n small{font-size:26px;font-weight:700}
+.study h3{margin:16px 0 8px;font-size:22px;color:var(--ink)}
 .study p{color:var(--stone)}
-.study .link{margin-top:16px;font-size:18px}
-.note{margin-top:28px;color:var(--stone);font-size:18px;max-width:70ch}
+.study .link{margin-top:14px;font-size:18px}
+.note{margin-top:26px;color:var(--stone);font-size:18px;max-width:70ch}
 @media (max-width:760px){.studies{grid-template-columns:1fr}}
 
 /* people */
-.people .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:40px}
+.people .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:36px}
 .person{display:flex;gap:24px;align-items:center;background:var(--white);border-radius:var(--r-lg);padding:24px}
-.person img,.person .av{flex:none;width:132px;height:132px;border-radius:50%;object-fit:cover}
-.person .av{display:grid;place-items:center;background:var(--sun);color:#1b2a22;font:700 54px/1 "Fredoka",sans-serif}
+.person img,.person .av{flex:none;width:128px;height:128px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 5px var(--lime)}
+.person .av{display:grid;place-items:center;background:var(--olive);color:var(--white);font:800 52px/1 "Rubik",sans-serif}
 .person h3{font-size:26px}
-.person .role{font-weight:700;color:var(--ink)}
+.person .role{font-weight:700}
 .person p{color:var(--stone);margin-top:6px}
 @media (max-width:860px){.people .grid{grid-template-columns:1fr}.person{flex-direction:column;text-align:center}}
 
-/* pride band */
-.pride{background:var(--sun);color:#1b2a22;text-align:center;padding:88px 0}
-.pride i{font-size:54px}
-.pride h2{color:#163a2f;font-size:clamp(34px,5vw,56px);max-width:17ch;margin:12px auto 0}
-.pride p{font-size:21px;max-width:44ch;margin:18px auto 0}
-
 /* faq */
-.faq{max-width:820px;margin-top:28px}
-details{background:var(--white);border-radius:var(--r-sm);margin-bottom:12px}
+.faq{max-width:820px;margin-top:26px}
+details{background:var(--white);border-radius:var(--r-sm);margin-bottom:12px;border-right:8px solid var(--lime)}
 summary{cursor:pointer;list-style:none;padding:22px 26px;font-size:21px;font-weight:700;display:flex;justify-content:space-between;gap:16px;align-items:center}
 summary::-webkit-details-marker{display:none}
-summary i{flex:none;font-size:26px;color:var(--pine);transition:transform .25s cubic-bezier(.16,1,.3,1)}
+summary i{flex:none;font-size:26px;color:var(--olive);transition:transform .25s cubic-bezier(.16,1,.3,1)}
 details[open] summary i{transform:rotate(45deg)}
 details p{padding:0 26px 24px;color:var(--stone);max-width:62ch}
 
 /* join */
-.join{padding:0 0 96px}
-.join .box{background:var(--pine);color:var(--on-pine);border-radius:var(--r-lg);padding:64px 56px;display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center;position:relative;overflow:hidden}
-.join .box::after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;background:var(--sun);opacity:.16;left:-80px;bottom:-120px}
-.join h2{color:inherit;font-size:clamp(34px,4.6vw,52px)}
-.join p{margin:14px 0 32px;font-size:22px;opacity:.92}
-.who{display:grid;gap:12px;font-size:19px;position:relative;z-index:1}
-.who b{font-size:24px}
+.join{padding:0 0 88px}
+.join .box{background:var(--olive);color:var(--cream);border-radius:var(--r-lg);padding:60px 56px;display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center}
+.join h2{color:var(--white);font-size:clamp(34px,4.6vw,50px)}
+.join p{margin:14px 0 30px;font-size:22px;color:#e9ebd8}
+.who{display:grid;gap:12px;font-size:19px}
+.who b{font-size:24px;color:var(--white)}
 .who a{color:inherit;display:inline-flex;gap:10px;align-items:center}
-.who i{font-size:24px}
+.who i{font-size:24px;color:var(--lime-2)}
 @media (max-width:860px){.join .box{grid-template-columns:1fr;padding:40px 24px}}
 
-footer{padding:28px 0 116px;font-size:17px;color:var(--stone)}
-footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-between}
-@media (min-width:641px){footer{padding-bottom:32px}}
+/* footer: beige with the regional landscape from the templates */
+footer{background:var(--beige)}
+footer .land{width:100%;height:auto;display:block}
+footer .bar{background:var(--olive);color:#e9ebd8;padding:22px 0 120px;font-size:17px}
+footer .bar .wrap{display:flex;flex-wrap:wrap;gap:10px 32px;justify-content:space-between}
+footer .bar a{color:var(--white)}
+@media (min-width:641px){footer .bar{padding-bottom:22px}}
 .dock{position:fixed;inset:auto 0 0 0;z-index:5;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:var(--white);border-top:1px solid var(--line)}
 .dock .btn{width:100%;justify-content:center;box-shadow:none}
 @media (min-width:641px){.dock{display:none}}
@@ -170,12 +174,11 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-bet
 <a class="skip" href="#main">דילוג לתוכן</a>
 
 <header>
-  <div class="wrap">
-    <a class="brand" href="#main">
-      <span class="ball" aria-hidden="true"><i class="ph-bold ph-ping-pong"></i></span>
-      <span><b>סניף חרמונים</b><small>עמותת פרקינסון בישראל</small></span>
-    </a>
-    <a class="btn sm" href="https://wa.me/972504450054?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%93%D7%95%D7%A8%D7%99%D7%AA%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%93%D7%A3%20%D7%A9%D7%9C%20%D7%A1%D7%A0%D7%99%D7%A3%20%D7%97%D7%A8%D7%9E%D7%95%D7%A0%D7%99%D7%9D%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%94%D7%A6%D7%98%D7%A8%D7%A4%D7%95%D7%AA%20%D7%9C%D7%A4%D7%A2%D7%99%D7%9C%D7%95%D7%AA." target="_blank" rel="noopener"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i>הצטרפות בוואטסאפ</a>
+  <div class="wrap logos">
+    <img src="img/logo-matnas.png" width="320" height="130" alt="מתנ״ס אזורי מבואות החרמון">
+    <img src="img/logo-one.png" width="215" height="154" alt="כוחו של האחד, בדרכו של רוני גלבוע">
+    <img class="club" src="img/logo-club.png" width="391" height="400" alt="מועדון טניס שולחן מבואות החרמון ע״ש רוני גלבוע">
+    <img src="img/logo-council.png" width="375" height="130" alt="מועצה אזורית מבואות החרמון">
   </div>
 </header>
 
@@ -183,14 +186,15 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-bet
   <section class="hero">
     <div class="wrap">
       <div>
+        <span class="org">עמותת פרקינסון בישראל, סניף חרמונים</span>
         <h1>יש לכם מקום ליד השולחן</h1>
-        <p class="lead">סניף חרמונים של עמותת פרקינסון. פינג פונג, פיזיותרפיה והרצאות, כל שבוע בצומת כ״ח.</p>
+        <p class="lead">פינג פונג, פיזיותרפיה והרצאות, כל שבוע במתנ״ס מבואות החרמון בצומת כ״ח.</p>
         <div class="actions">
           <a class="btn" href="https://wa.me/972504450054?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%93%D7%95%D7%A8%D7%99%D7%AA%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%93%D7%A3%20%D7%A9%D7%9C%20%D7%A1%D7%A0%D7%99%D7%A3%20%D7%97%D7%A8%D7%9E%D7%95%D7%A0%D7%99%D7%9D%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%94%D7%A6%D7%98%D7%A8%D7%A4%D7%95%D7%AA%20%D7%9C%D7%A4%D7%A2%D7%99%D7%9C%D7%95%D7%AA." target="_blank" rel="noopener"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i>הצטרפות בוואטסאפ</a>
           <a class="link" href="#morning">איך נראה בוקר אצלנו<i class="ph ph-arrow-down" aria-hidden="true"></i></a>
         </div>
       </div>
-      <figure class="photo">
+      <figure class="frame">
         <img src="img/hannover.jpg" width="1200" height="893" fetchpriority="high" alt="המאמן שחר גלעד ושתי שחקניות מהקבוצה בחולצות נבחרת ישראל, מחזיקים את דגל המועצה האזורית מבואות החרמון באולם אליפות העולם">
         <figcaption>באליפות העולם, הנובר 2026</figcaption>
         <span class="drop" aria-hidden="true"></span>
@@ -198,7 +202,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-bet
     </div>
   </section>
 
-  <section class="sec morning" id="morning" style="padding-top:24px">
+  <section class="sec morning" id="morning">
     <div class="wrap">
       <div>
         <h2>בוקר יום חמישי אצלנו</h2>
@@ -213,31 +217,62 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-bet
             <div><h3>הרצאה, סדנה או הפעלה</h3><p>כל שבוע נושא אחר, עם אנשי מקצוע ועם זמן לשאלות.</p></div>
           </li>
         </ol>
-        <div class="where">
+        <div class="pill">
           <span><i class="ph ph-map-pin-line" aria-hidden="true"></i>מתנ״ס מבואות החרמון, צומת כ״ח</span>
           <a class="link" href="https://waze.com/ul?q=%D7%9E%D7%AA%D7%A0%22%D7%A1%20%D7%9E%D7%91%D7%95%D7%90%D7%95%D7%AA%20%D7%94%D7%97%D7%A8%D7%9E%D7%95%D7%9F" target="_blank" rel="noopener"><i class="ph ph-navigation-arrow" aria-hidden="true"></i>ניווט בוויז</a>
         </div>
       </div>
-      <figure><img src="img/table.jpg" width="1000" height="730" loading="lazy" alt="כדור פינג פונג באוויר מעל שולחן משחק כחול באולם"></figure>
+      <figure style="margin:0"><img src="img/table.jpg" width="1000" height="730" loading="lazy" alt="כדור פינג פונג באוויר מעל שולחן משחק כחול באולם"></figure>
     </div>
   </section>
 
-  <section style="padding-bottom:96px">
+  <section class="week" style="padding-bottom:88px">
     <div class="wrap">
-      <div class="week">
-        <h2>ועוד במהלך השבוע</h2>
+      <h2>ועוד במהלך השבוע</h2>
+      <div class="days">
         <div class="day"><i class="ph ph-ping-pong" aria-hidden="true"></i><div><b>ראשון, 9:00 עד 10:00</b><span>פינג פונג באולם שאר ישוב</span></div></div>
         <div class="day"><i class="ph ph-person-simple-walk" aria-hidden="true"></i><div><b>רביעי, בבוקר</b><span>פיזיותרפיה קבוצתית בחסות קופת חולים כללית</span></div></div>
-        <div class="chips">
-          <span class="chip"><i class="ph ph-swimming-pool" aria-hidden="true"></i>הידרותרפיה בקבוצה</span>
-          <span class="chip"><i class="ph ph-microphone" aria-hidden="true"></i>סדנת קול עם קלינאית תקשורת</span>
-          <span class="chip"><i class="ph ph-users-three" aria-hidden="true"></i>סדנת תמיכה לבני משפחה</span>
-        </div>
+      </div>
+      <div class="chips">
+        <span class="chip"><i class="ph ph-swimming-pool" aria-hidden="true"></i>הידרותרפיה בקבוצה</span>
+        <span class="chip"><i class="ph ph-microphone" aria-hidden="true"></i>סדנת קול עם קלינאית תקשורת</span>
+        <span class="chip"><i class="ph ph-users-three" aria-hidden="true"></i>סדנת תמיכה לבני משפחה</span>
       </div>
     </div>
   </section>
 
-  <section class="sec why" style="padding-top:0">
+  <section class="sec partners">
+    <div class="wrap">
+      <h2>מי עומד מאחורי המפגשים</h2>
+      <p class="lead">הסניף פועל יחד עם גופים מהאזור, וכל אחד מהם נותן חלק אחר מהבוקר.</p>
+      <div class="roni">
+        <img src="img/logo-one.png" width="215" height="154" alt="כוחו של האחד, בדרכו של רוני גלבוע">
+        <div>
+          <h3>כוחו של האחד, בדרכו של רוני גלבוע</h3>
+          <p>רוני גלבוע מבית הלל, טייס לשעבר בחיל האוויר, יזם את פרויקט הפינג פונג של עמותת פרקינסון בישראל. בתוך שנה הוקמו קבוצות בסניפים ברחבי הארץ ונבחרת ישראל יצאה לאליפות העולם הראשונה שלה. המועדון שלנו נקרא על שמו, והקבוצה כאן ממשיכה את הדרך שהתחיל.</p>
+        </div>
+      </div>
+      <div class="orgs">
+        <article class="orgcard">
+          <div class="lg"><img src="img/logo-club.png" width="391" height="400" loading="lazy" alt="מועדון טניס שולחן מבואות החרמון ע״ש רוני גלבוע"></div>
+          <h3>מועדון טניס שולחן מבואות החרמון ע״ש רוני גלבוע</h3>
+          <p>המועדון שמאמן את הקבוצה, ומפעיל קבוצות לכל הגילאים בשאר ישוב, ברמת כורזים ובקיבוץ דפנה.</p>
+        </article>
+        <article class="orgcard">
+          <div class="lg"><img src="img/logo-matnas.png" width="320" height="130" loading="lazy" alt="מתנ״ס אזורי מבואות החרמון"></div>
+          <h3>מתנ״ס אזורי מבואות החרמון</h3>
+          <p>הבית של המפגש השבועי ביום חמישי, בצומת כ״ח.</p>
+        </article>
+        <article class="orgcard">
+          <div class="lg"><img src="img/logo-council.png" width="375" height="130" loading="lazy" alt="מועצה אזורית מבואות החרמון"></div>
+          <h3>מועצה אזורית מבואות החרמון</h3>
+          <p>שותפה לפעילות, והדגל שלה הגיע איתנו עד לאליפות העולם בהנובר.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec why">
     <div class="wrap">
       <h2>למה דווקא פינג פונג?</h2>
       <p class="lead">המשחק דורש תגובה מהירה, תיאום בין העין ליד ושיווי משקל. כך זה נראה במחקרים:</p>
@@ -283,15 +318,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-bet
     </div>
   </section>
 
-  <section class="pride">
-    <div class="wrap">
-      <i class="ph-fill ph-trophy" aria-hidden="true"></i>
-      <h2>מהאולם בצומת כ״ח לאליפות העולם</h2>
-      <p>שתי שחקניות מהקבוצה שלנו ייצגו את ישראל באליפות העולם בטניס שולחן לפרקינסון, בהנובר, ספטמבר 2026.</p>
-    </div>
-  </section>
-
-  <section class="sec">
+  <section class="sec" style="padding-top:0">
     <div class="wrap">
       <h2>שאלות שחוזרות</h2>
       <div class="faq">
@@ -317,7 +344,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-bet
         <div>
           <h2>בואו לנסות בוקר אחד</h2>
           <p>שולחים הודעה לדורית, והיא כבר תדאג לשאר.</p>
-          <a class="btn sun" href="https://wa.me/972504450054?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%93%D7%95%D7%A8%D7%99%D7%AA%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%93%D7%A3%20%D7%A9%D7%9C%20%D7%A1%D7%A0%D7%99%D7%A3%20%D7%97%D7%A8%D7%9E%D7%95%D7%A0%D7%99%D7%9D%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%94%D7%A6%D7%98%D7%A8%D7%A4%D7%95%D7%AA%20%D7%9C%D7%A4%D7%A2%D7%99%D7%9C%D7%95%D7%AA." target="_blank" rel="noopener"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i>הצטרפות בוואטסאפ</a>
+          <a class="btn" href="https://wa.me/972504450054?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%93%D7%95%D7%A8%D7%99%D7%AA%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%93%D7%A3%20%D7%A9%D7%9C%20%D7%A1%D7%A0%D7%99%D7%A3%20%D7%97%D7%A8%D7%9E%D7%95%D7%A0%D7%99%D7%9D%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%94%D7%A6%D7%98%D7%A8%D7%A4%D7%95%D7%AA%20%D7%9C%D7%A4%D7%A2%D7%99%D7%9C%D7%95%D7%AA." target="_blank" rel="noopener"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i>הצטרפות בוואטסאפ</a>
         </div>
         <div class="who">
           <div><b>דורית היימן</b><br>מנהלת הסניף</div>
@@ -330,9 +357,12 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px 32px;justify-content:space-bet
 </main>
 
 <footer>
-  <div class="wrap">
-    <span>סניף חרמונים, עמותת פרקינסון בישראל</span>
-    <a href="https://www.parkinson.org.il/" target="_blank" rel="noopener">לאתר העמותה</a>
+  <img class="land" src="img/landscape.png" width="1600" height="267" loading="lazy" alt="">
+  <div class="bar">
+    <div class="wrap">
+      <span>סניף חרמונים, עמותת פרקינסון בישראל. בשיתוף מתנ״ס אזורי מבואות החרמון ומועצה אזורית מבואות החרמון.</span>
+      <a href="https://www.parkinson.org.il/" target="_blank" rel="noopener">לאתר העמותה</a>
+    </div>
   </div>
 </footer>
 
