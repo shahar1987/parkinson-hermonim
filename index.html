@@ -11,11 +11,8 @@
 <meta property="og:image" content="https://shahar1987.github.io/parkinson-hermonim/img/hannover.jpg">
 <meta property="og:locale" content="he_IL">
 <meta name="theme-color" content="#3d4617">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="fonts/rubik.css">
 <link rel="preload" as="image" href="img/hannover.jpg">
-<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
 <style>
 /* Calm club palette. Built for readers with Parkinson's: one thing per screen, body text 7:1+,
    main actions 72px tall and full width on phones, no sticky bars, no motion, no tap-to-open content.
@@ -45,7 +42,8 @@ a{color:var(--olive)}
 /* buttons: big, plain, one look per job */
 .btn{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;max-width:420px;min-height:72px;padding:0 28px;border-radius:999px;background:var(--olive);color:var(--white);font:600 22px/1.2 "Rubik",sans-serif;text-decoration:none;text-align:center;cursor:pointer}
 .btn:hover{background:var(--olive-2)}
-.btn i{font-size:28px;flex:none}
+.ic{width:1em;height:1em;flex:none;display:inline-block;vertical-align:middle}
+.btn .ic{font-size:28px}
 .btn.ghost{background:var(--white);color:var(--olive);border:2px solid var(--olive);min-height:64px;font-size:20px}
 .btn.ghost:hover{background:var(--sage)}
 .btn.call span{display:flex;flex-direction:column;line-height:1.3}
@@ -67,7 +65,7 @@ header{background:var(--white);border-bottom:1px solid var(--line)}
 .hero .lead{margin-top:14px}
 .when{list-style:none;padding:0;margin:24px 0 30px;display:grid;gap:10px;font-size:21px;font-weight:500}
 .when li{display:flex;gap:12px;align-items:center}
-.when i{font-size:28px;color:var(--olive)}
+.when .ic{font-size:28px;color:var(--olive)}
 .frame{margin:0}
 .frame img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r-lg)}
 .frame figcaption{margin-top:10px;font-size:18px;color:var(--stone)}
@@ -118,9 +116,10 @@ header{background:var(--white);border-bottom:1px solid var(--line)}
 /* pride */
 .pride{padding-top:0}
 .pride .card{background:var(--sage);border-radius:var(--r-lg);padding:52px 24px;text-align:center}
-.pride i{font-size:44px;color:var(--olive)}
-.pride h2{max-width:20ch;margin:8px auto 0}
-.pride p{color:var(--stone);max-width:44ch;margin:12px auto 0}
+.pride .ic{font-size:44px;color:var(--olive)}
+.pride h2{max-width:24ch;margin:8px auto 0}
+.nw{white-space:nowrap}
+.pride .steps{margin:36px auto 0;text-align:right}
 
 /* faq: everything visible, nothing to tap open */
 .faq-sec{background:var(--white)}
@@ -154,6 +153,7 @@ footer .land{width:100%;height:auto}
 footer .bar{background:var(--olive);color:#eceedd;padding:18px 0;font-size:19px}
 footer .bar .wrap{display:flex;flex-wrap:wrap;gap:6px 32px;justify-content:space-between;align-items:center}
 footer .bar a{color:var(--white)}
+.foot-links{display:flex;flex-wrap:wrap;gap:0 28px}
 </style>
 </head>
 <body>
@@ -173,10 +173,10 @@ footer .bar a{color:var(--white)}
         <h1>יש לכם מקום ליד השולחן</h1>
         <p class="lead">קבוצה שבועית לאנשים עם פרקינסון ולבני המשפחה.</p>
         <ul class="when">
-          <li><i class="ph ph-calendar-blank" aria-hidden="true"></i>ימי ראשון, 8:15 בבוקר</li>
-          <li><i class="ph ph-map-pin" aria-hidden="true"></i>אולם הטניס שולחן, שאר ישוב</li>
+          <li><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"/></svg>ימי ראשון, 8:15 בבוקר</li>
+          <li><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"/></svg>אולם הטניס שולחן, שאר ישוב</li>
         </ul>
-        <a class="btn" href="https://wa.me/972504450054?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%93%D7%95%D7%A8%D7%99%D7%AA%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%93%D7%A3%20%D7%A9%D7%9C%20%D7%A1%D7%A0%D7%99%D7%A3%20%D7%97%D7%A8%D7%9E%D7%95%D7%A0%D7%99%D7%9D%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%94%D7%A6%D7%98%D7%A8%D7%A4%D7%95%D7%AA%20%D7%9C%D7%A4%D7%A2%D7%99%D7%9C%D7%95%D7%AA." target="_blank" rel="noopener"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i>הצטרפות בוואטסאפ</a>
+        <a class="btn" href="https://wa.me/972504450054?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%93%D7%95%D7%A8%D7%99%D7%AA%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%93%D7%A3%20%D7%A9%D7%9C%20%D7%A1%D7%A0%D7%99%D7%A3%20%D7%97%D7%A8%D7%9E%D7%95%D7%A0%D7%99%D7%9D%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%94%D7%A6%D7%98%D7%A8%D7%A4%D7%95%D7%AA%20%D7%9C%D7%A4%D7%A2%D7%99%D7%9C%D7%95%D7%AA." target="_blank" rel="noopener"><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg>הצטרפות בוואטסאפ</a>
       </div>
       <figure class="frame">
         <img src="img/hannover.jpg" width="1200" height="893" fetchpriority="high" alt="המאמן שחר גילעד ושתי שחקניות מהקבוצה בחולצות נבחרת ישראל באולם אליפות העולם">
@@ -207,7 +207,7 @@ footer .bar a{color:var(--white)}
         <li><span class="t">9:15</span><div><h3>טניס שולחן</h3><p>שעה של משחק עם המאמן שחר גילעד. אין צורך בניסיון או בציוד.</p></div></li>
         <li><span class="t">10:15</span><div><h3>מפגש חברים</h3><p>יושבים יחד, ולא פעם יש גם הרצאה או פעילות מעניינת.</p></div></li>
       </ol>
-      <a class="btn ghost" href="https://waze.com/ul?q=%D7%A9%D7%90%D7%A8%20%D7%99%D7%A9%D7%95%D7%91" target="_blank" rel="noopener"><i class="ph ph-navigation-arrow" aria-hidden="true"></i>ניווט לאולם בשאר ישוב</a>
+      <a class="btn ghost" href="https://waze.com/ul?q=%D7%A9%D7%90%D7%A8%20%D7%99%D7%A9%D7%95%D7%91" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M237.33,106.21,61.41,41l-.16-.05A16,16,0,0,0,40.9,61.25a1,1,0,0,0,.05.16l65.26,175.92A15.77,15.77,0,0,0,121.28,248h.3a15.77,15.77,0,0,0,15-11.29l.06-.2,21.84-78,78-21.84.2-.06a16,16,0,0,0,.62-30.38ZM149.84,144.3a8,8,0,0,0-5.54,5.54L121.3,232l-.06-.17L56,56l175.82,65.22.16.06Z"/></svg>ניווט לאולם בשאר ישוב</a>
       <p class="also">עוד בסניף: הידרותרפיה בקבוצה, סדנת קול עם קלינאית תקשורת וסדנת תמיכה לבני משפחה.</p>
     </div>
   </section>
@@ -220,6 +220,7 @@ footer .bar a{color:var(--white)}
       <ul class="team">
         <li><span class="role">מנהלת הסניף</span><b>דורית היימן</b></li>
         <li><span class="role">מאמן טניס שולחן</span><b>שחר גילעד</b></li>
+        <li><span class="role">מדריך טניס שולחן</span><b>דור נברו</b></li>
         <li><span class="role">מתנדב</span><b>משה רוזנפלד</b></li>
         <li><span class="role">פיזיותרפיסט</span><b>לירן</b></li>
       </ul>
@@ -238,26 +239,31 @@ footer .bar a{color:var(--white)}
           <div class="chips" style="margin-top:16px">
             <span class="chip">דיבור</span><span class="chip">כתב יד</span><span class="chip">התלבשות</span><span class="chip">קימה מהמיטה ומהכיסא</span><span class="chip">הליכה ושיווי משקל</span><span class="chip">נוקשות ואיטיות בתנועה</span><span class="chip">רעד בידיים</span>
           </div>
-          <a class="btn ghost" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8299968/" target="_blank" rel="noopener">למאמר המלא<i class="ph ph-arrow-up-left" aria-hidden="true"></i></a>
+          <a class="btn ghost" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8299968/" target="_blank" rel="noopener">למאמר המלא<svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M197.66,197.66a8,8,0,0,1-11.32,0L72,83.31V168a8,8,0,0,1-16,0V64a8,8,0,0,1,8-8H168a8,8,0,0,1,0,16H83.31L197.66,186.34A8,8,0,0,1,197.66,197.66Z"/></svg></a>
         </article>
         <article class="study">
           <div class="n">12 <small>שבועות</small></div>
           <h3>תוכנית NeuroPong, אוניברסיטת קולורדו</h3>
           <p>30 משתתפים. ציון התסמינים המוטוריים ירד בממוצע ב־5.7 נקודות, עם שיפור בשיווי המשקל ובסבולת ההליכה.</p>
-          <a class="btn ghost" href="https://nrtimes.co.uk/table-tennis-could-improve-balance-in-parkinsons-patients-study-ins25/" target="_blank" rel="noopener">לכתבה על המחקר<i class="ph ph-arrow-up-left" aria-hidden="true"></i></a>
+          <a class="btn ghost" href="https://nrtimes.co.uk/table-tennis-could-improve-balance-in-parkinsons-patients-study-ins25/" target="_blank" rel="noopener">לכתבה על המחקר<svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M197.66,197.66a8,8,0,0,1-11.32,0L72,83.31V168a8,8,0,0,1-16,0V64a8,8,0,0,1,8-8H168a8,8,0,0,1,0,16H83.31L197.66,186.34A8,8,0,0,1,197.66,197.66Z"/></svg></a>
         </article>
       </div>
       <p class="note">ומה לגבי התקדמות המחלה? עדיין אין מחקר שהוכיח שפינג פונג מאט אותה. מה שהמחקרים כן מראים הוא שיפור בתנועה ובתפקוד, בעזרת פעילות בטוחה ומהנה שעושים יחד עם אחרים. אלה מחקרים קטנים יחסית, והם לא באים במקום טיפול רפואי.</p>
-      <a class="btn ghost" style="margin-top:18px" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12686844/" target="_blank" rel="noopener">לסקירה המסכמת ב־Cureus<i class="ph ph-arrow-up-left" aria-hidden="true"></i></a>
+      <a class="btn ghost" style="margin-top:18px" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12686844/" target="_blank" rel="noopener">לסקירה המסכמת ב־Cureus<svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M197.66,197.66a8,8,0,0,1-11.32,0L72,83.31V168a8,8,0,0,1-16,0V64a8,8,0,0,1,8-8H168a8,8,0,0,1,0,16H83.31L197.66,186.34A8,8,0,0,1,197.66,197.66Z"/></svg></a>
     </div>
   </section>
 
   <section class="sec pride">
     <div class="wrap">
       <div class="card">
-        <i class="ph ph-trophy" aria-hidden="true"></i>
+        <svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M232,64H208V48a8,8,0,0,0-8-8H56a8,8,0,0,0-8,8V64H24A16,16,0,0,0,8,80V96a40,40,0,0,0,40,40h3.65A80.13,80.13,0,0,0,120,191.61V216H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V191.58c31.94-3.23,58.44-25.64,68.08-55.58H208a40,40,0,0,0,40-40V80A16,16,0,0,0,232,64ZM48,120A24,24,0,0,1,24,96V80H48v32q0,4,.39,8Zm144-8.9c0,35.52-29,64.64-64,64.9a64,64,0,0,1-64-64V56H192ZM232,96a24,24,0,0,1-24,24h-.5a81.81,81.81,0,0,0,.5-8.9V80h24Z"/></svg>
         <h2>מהאולם בשאר ישוב לאליפות העולם</h2>
-        <p>שתי שחקניות מהקבוצה שלנו ייצגו את ישראל באליפות העולם בטניס שולחן לפרקינסון, בהנובר, ספטמבר 2026.</p>
+        <ol class="steps">
+          <li><span class="t">2021</span><div><h3>נפתחת קבוצת הטניס שולחן</h3><p>באוקטובר 2021 הקבוצה מתחילה להיפגש פעם בשבוע עם המאמן שחר גילעד.</p></div></li>
+          <li><span class="t">2022</span><div><h3>מה שקורה אצלנו הופך לתוכנית ארצית</h3><p>באביב 2022 רוני גלבוע מציע לעמותה לפתוח קבוצות פינג פונג בסניפים ברחבי הארץ, על בסיס הקבוצה שלנו.</p></div></li>
+          <li><span class="t">2022</span><div><h3>אליפות העולם הראשונה של נבחרת ישראל</h3><p>בספטמבר 2022, בפולה שבקרואטיה. רוני גלבוע היה בין השחקנים.</p></div></li>
+          <li><span class="t">2026</span><div><h3>הנובר, גרמניה</h3><p>בספטמבר 2026 שתי שחקניות מהקבוצה שלנו ייצגו את ישראל באליפות העולם בטניס שולחן לפרקינסון.</p></div></li>
+        </ol>
       </div>
     </div>
   </section>
@@ -281,8 +287,8 @@ footer .bar a{color:var(--white)}
       <div class="box">
         <h2>בואו לנסות בוקר אחד</h2>
         <p>שולחים הודעה לדורית היימן, מנהלת הסניף, והיא כבר תדאג לשאר.</p>
-        <a class="btn" href="https://wa.me/972504450054?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%93%D7%95%D7%A8%D7%99%D7%AA%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%93%D7%A3%20%D7%A9%D7%9C%20%D7%A1%D7%A0%D7%99%D7%A3%20%D7%97%D7%A8%D7%9E%D7%95%D7%A0%D7%99%D7%9D%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%94%D7%A6%D7%98%D7%A8%D7%A4%D7%95%D7%AA%20%D7%9C%D7%A4%D7%A2%D7%99%D7%9C%D7%95%D7%AA." target="_blank" rel="noopener"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i>הצטרפות בוואטסאפ</a>
-        <a class="btn ghost call" href="tel:+972504450054"><i class="ph ph-phone" aria-hidden="true"></i><span>שיחה לדורית היימן<small dir="ltr">050-4450054</small></span></a>
+        <a class="btn" href="https://wa.me/972504450054?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%93%D7%95%D7%A8%D7%99%D7%AA%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%93%D7%A3%20%D7%A9%D7%9C%20%D7%A1%D7%A0%D7%99%D7%A3%20%D7%97%D7%A8%D7%9E%D7%95%D7%A0%D7%99%D7%9D%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%94%D7%A6%D7%98%D7%A8%D7%A4%D7%95%D7%AA%20%D7%9C%D7%A4%D7%A2%D7%99%D7%9C%D7%95%D7%AA." target="_blank" rel="noopener"><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg>הצטרפות בוואטסאפ</a>
+        <a class="btn ghost call" href="tel:+972504450054"><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></svg><span>שיחה לדורית היימן<small dir="ltr">050-4450054</small></span></a>
       </div>
     </div>
   </section>
@@ -294,7 +300,7 @@ footer .bar a{color:var(--white)}
         <img src="img/logo-one.png" width="215" height="154" alt="כוחו של האחד, בדרכו של רוני גלבוע">
         <div>
           <h3>כוחו של האחד, בדרכו של רוני גלבוע</h3>
-          <p>רוני גלבוע מבית הלל, טייס לשעבר בחיל האוויר, יזם את פרויקט הפינג פונג של עמותת פרקינסון בישראל. בתוך שנה הוקמו קבוצות בסניפים ברחבי הארץ ונבחרת ישראל יצאה לאליפות העולם הראשונה שלה. המועדון שלנו נקרא על שמו, והקבוצה כאן ממשיכה את הדרך שהתחיל.</p>
+          <p>רוני גלבוע מבית הלל, טייס לשעבר בחיל האוויר, יזם את פרויקט הפינג פונג של עמותת פרקינסון בישראל. המועדון שלנו נקרא על שמו, והקבוצה כאן ממשיכה את הדרך שהתחיל.</p>
         </div>
       </div>
 
@@ -323,8 +329,12 @@ footer .bar a{color:var(--white)}
   <img class="land" src="img/landscape.png" width="1600" height="267" loading="lazy" alt="">
   <div class="bar">
     <div class="wrap">
-      <span>סניף חרמונים, עמותת פרקינסון בישראל</span>
-      <a class="link" href="https://www.parkinson.org.il/" target="_blank" rel="noopener">לאתר העמותה</a>
+      <span>סניף חרמונים, עמותת פרקינסון בישראל <span class="nw">(ע״ר 580225225)</span></span>
+      <nav aria-label="מידע על האתר" class="foot-links">
+        <a class="link" href="accessibility.html">הצהרת נגישות</a>
+        <a class="link" href="privacy.html">פרטיות ותנאי שימוש</a>
+        <a class="link" href="https://www.parkinson.org.il/" target="_blank" rel="noopener">לאתר העמותה</a>
+      </nav>
     </div>
   </div>
 </footer>
