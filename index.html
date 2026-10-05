@@ -54,7 +54,8 @@ header{background:var(--white);border-bottom:1px solid var(--line)}
 .logos{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:100px;padding-block:12px}
 .logos img{height:60px;width:auto}
 .logos .club{height:86px}
-@media (max-width:700px){.logos{display:grid;grid-template-columns:1fr 1fr;justify-items:center;gap:14px 18px}.logos img{height:42px}.logos .club{height:68px}}
+.logos .pk{height:88px}
+@media (max-width:700px){.logos{display:grid;grid-template-columns:1fr 1fr;justify-items:center;gap:14px 18px}.logos img{height:42px}.logos .club{height:68px}.logos .pk{grid-column:1/-1;height:78px}}
 
 /* hero */
 .hero{padding:72px 0 96px}
@@ -185,6 +186,7 @@ footer .bar a{color:var(--white)}
 
 <header>
   <div class="wrap logos">
+    <img class="pk" src="img/logo-parkinson.png" width="207" height="280" alt="עמותת פרקינסון בישראל">
     <img src="img/logo-matnas.png" width="320" height="130" alt="מתנ״ס אזורי מבואות החרמון">
     <img src="img/logo-one.png" width="215" height="154" alt="כוחו של האחד, בדרכו של רוני גלבוע">
     <img class="club" src="img/logo-club.png" width="391" height="400" alt="מועדון טניס שולחן מבואות החרמון ע״ש רוני גלבוע">
@@ -386,7 +388,6 @@ footer .bar a{color:var(--white)}
         <div class="who">
           <div><b>דורית היימן</b><br>מנהלת הסניף</div>
           <a href="tel:+972504450054"><i class="ph ph-phone" aria-hidden="true"></i>050-4450054</a>
-          <a href="mailto:doritcoach@gmail.com"><i class="ph ph-envelope-simple" aria-hidden="true"></i>doritcoach@gmail.com</a>
         </div>
       </div>
     </div>
