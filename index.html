@@ -63,6 +63,9 @@ header{background:var(--white);border-bottom:1px solid var(--line)}
 .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
 .hero h1{font-size:clamp(34px,4.6vw,54px)}
 .hero .lead{margin-top:14px}
+.offer{list-style:none;padding:0;margin:20px 0 0;display:grid;grid-template-columns:repeat(2,auto);justify-content:start;gap:8px 32px;font-size:20px;font-weight:500}
+.offer li::before{content:"✔";color:var(--olive);margin-left:8px}
+.ops{margin-top:18px;font-size:19px}
 .when{list-style:none;padding:0;margin:24px 0 30px;display:grid;gap:10px;font-size:21px;font-weight:500}
 .when li{display:flex;gap:12px;align-items:center}
 .when .ic{font-size:28px;color:var(--olive)}
@@ -183,7 +186,7 @@ footer .bar a{color:var(--white)}
 <header>
   <div class="wrap brand">
     <img src="img/logo-parkinson.png" width="207" height="280" alt="">
-    <span><b>סניף חרמונים</b>עמותת פרקינסון בישראל</span>
+    <span><b>סניף חרמונים</b>עמותת פרקינסון בישראל · אקדמיה · ספורט · כיף</span>
   </div>
 </header>
 
@@ -191,8 +194,17 @@ footer .bar a{color:var(--white)}
   <section class="hero">
     <div class="wrap">
       <div>
-        <h1>יש לכם מקום ליד השולחן</h1>
-        <p class="lead">קבוצה שבועית לאנשים עם פרקינסון ולבני המשפחה.</p>
+        <h1>את/ה לא לבד</h1>
+        <p class="lead">סניף חרמונים — מועדון איכות חיים למתמודדים עם מחלת הפרקינסון, פועל משנת 2021.</p>
+        <ul class="offer">
+          <li>אימוני פינג פונג</li>
+          <li>פיזיותרפיה</li>
+          <li>הרצאות מגוונות</li>
+          <li>טיפול בקול</li>
+          <li>תמיכה למשפחות</li>
+          <li>ועוד…</li>
+        </ul>
+        <p class="lead ops">מפעילי המועדון מומחים בתחומם ומנוסים בעבודה עם מתמודדי פרקינסון.</p>
         <ul class="when">
           <li><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Z"/></svg>ימי ראשון, 8:15 בבוקר</li>
           <li><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"/></svg>אולם הטניס שולחן, שאר ישוב</li>
@@ -203,6 +215,19 @@ footer .bar a{color:var(--white)}
         <img src="img/hannover.jpg" width="1200" height="893" fetchpriority="high" alt="המאמן שחר גילעד ושתי שחקניות מהקבוצה בחולצות נבחרת ישראל באולם אליפות העולם">
         <figcaption>שחקניות מהקבוצה באליפות העולם, הנובר 2026</figcaption>
       </figure>
+    </div>
+  </section>
+
+  <section class="sec morning" id="morning">
+    <div class="wrap">
+      <h2>מה קורה בבוקר יום ראשון</h2>
+      <ol class="steps">
+        <li><span class="t">8:15</span><div><h3>פיזיותרפיה בקבוצה</h3><p>שעה של תרגול בקבוצה, בקצב שמתאים לכל משתתף.</p></div></li>
+        <li><span class="t">9:15</span><div><h3>טניס שולחן</h3><p>שעה של משחק עם המאמן שחר גילעד. אין צורך בניסיון או בציוד.</p></div></li>
+        <li><span class="t">10:15</span><div><h3>מפגש חברים</h3><p>יושבים יחד, ולא פעם יש גם הרצאה או פעילות מעניינת.</p></div></li>
+      </ol>
+      <a class="btn ghost" href="https://waze.com/ul?q=%D7%A9%D7%90%D7%A8%20%D7%99%D7%A9%D7%95%D7%91" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M237.33,106.21,61.41,41l-.16-.05A16,16,0,0,0,40.9,61.25a1,1,0,0,0,.05.16l65.26,175.92A15.77,15.77,0,0,0,121.28,248h.3a15.77,15.77,0,0,0,15-11.29l.06-.2,21.84-78,78-21.84.2-.06a16,16,0,0,0,.62-30.38ZM149.84,144.3a8,8,0,0,0-5.54,5.54L121.3,232l-.06-.17L56,56l175.82,65.22.16.06Z"/></svg>ניווט לאולם בשאר ישוב</a>
+      <p class="also">עוד בסניף: הידרותרפיה בקבוצה, סדנת קול עם קלינאית תקשורת וסדנת תמיכה לבני משפחה.</p>
     </div>
   </section>
 
@@ -244,18 +269,6 @@ footer .bar a{color:var(--white)}
     </div>
   </section>
 
-  <section class="sec morning" id="morning">
-    <div class="wrap">
-      <h2>מה קורה בבוקר יום ראשון</h2>
-      <ol class="steps">
-        <li><span class="t">8:15</span><div><h3>פיזיותרפיה בקבוצה</h3><p>שעה של תרגול בקבוצה, בקצב שמתאים לכל משתתף.</p></div></li>
-        <li><span class="t">9:15</span><div><h3>טניס שולחן</h3><p>שעה של משחק עם המאמן שחר גילעד. אין צורך בניסיון או בציוד.</p></div></li>
-        <li><span class="t">10:15</span><div><h3>מפגש חברים</h3><p>יושבים יחד, ולא פעם יש גם הרצאה או פעילות מעניינת.</p></div></li>
-      </ol>
-      <a class="btn ghost" href="https://waze.com/ul?q=%D7%A9%D7%90%D7%A8%20%D7%99%D7%A9%D7%95%D7%91" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M237.33,106.21,61.41,41l-.16-.05A16,16,0,0,0,40.9,61.25a1,1,0,0,0,.05.16l65.26,175.92A15.77,15.77,0,0,0,121.28,248h.3a15.77,15.77,0,0,0,15-11.29l.06-.2,21.84-78,78-21.84.2-.06a16,16,0,0,0,.62-30.38ZM149.84,144.3a8,8,0,0,0-5.54,5.54L121.3,232l-.06-.17L56,56l175.82,65.22.16.06Z"/></svg>ניווט לאולם בשאר ישוב</a>
-      <p class="also">עוד בסניף: הידרותרפיה בקבוצה, סדנת קול עם קלינאית תקשורת וסדנת תמיכה לבני משפחה.</p>
-    </div>
-  </section>
 
 
 
